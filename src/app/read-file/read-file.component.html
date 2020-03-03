@@ -1,0 +1,12 @@
+<div class="main">
+
+    <div class="read-file">
+        <input type="file" class="read-file__input" placeholder="Przegladaj..."
+            (change)="onChange($event.target.files)">
+    </div>
+
+    <div class="show-file">
+        <pre>{{fileContent}}</pre>
+    </div>
+
+</div>
