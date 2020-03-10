@@ -3,6 +3,19 @@
     height: 100vh;
 }
 
+.my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .read-file{
     height: 30vh;
     background-image: linear-gradient(
@@ -32,6 +45,40 @@
     animation-fill-mode: backwards;
     animation-timing-function: ease-out;
 }
+
+.read-file__btn{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    color: #ffffff;
+    background-image: linear-gradient(#971939bd, #26318fc0);
+    padding: 20px 20px;
+    border-radius: 100px;
+}
+
+.statistics-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.statistics-menu__btn{
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 20px 20px;
+    background: linear-gradient(to left top,#790a2bda,#030327da),
+    url(https://tdwi.org/-/media/TDWI/TDWI/BITW/AI17.jpg);
+}
+
+.statistics-menu__btn:hover{
+    background:  linear-gradient(#030327da,#790a2bda),
+    url(https://tdwi.org/-/media/TDWI/TDWI/BITW/AI17.jpg);
+}
+
 
 .show-file{
     text-align: center;

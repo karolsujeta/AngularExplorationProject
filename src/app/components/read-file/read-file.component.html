@@ -1,12 +1,60 @@
 <div class="main">
 
     <div class="read-file">
+
         <input type="file" class="read-file__input" placeholder="Przegladaj..."
             (change)="onChange($event.target.files)">
+
+        <button class="read-file__btn" (click)="sendFile()">Wyślij plik do przetworzenia</button>
+
     </div>
 
-    <div class="show-file">
-        <pre>{{fileContent}}</pre>
+    <div class="statistics-menu">
+
+        <button class="statistics-menu__btn" (click)="avgFixedAcidity()">Oblicz średnią "fixed acidity"!</button>
+
+        <button class="statistics-menu__btn">Oblicz coś v2</button>
+
+        <button class="statistics-menu__btn">Oblicz coś v3</button>
+
+    </div>
+
+    <div>{{fixedAcidity}}</div>
+
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <table class="table table-dark table-striped" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>FixedAcidity</th>
+                    <th>VolatileAcidity</th>
+                    <th>CitricAcid</th>
+                    <th>ResidualSugar</th>
+                    <th>Chlorides</th>
+                    <th>FreeSulfurDioxide</th>
+                    <th>TotalSulfurDioxide</th>
+                    <th>Density</th>
+                    <th>PH</th>
+                    <th>Sulphates</th>
+                    <th>Alcohol</th>
+                    <th>Sulphates</th>
+                    <th>Quality</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let x of records">
+                <td>{{x.fixedAcidity}}</td>
+                <td>{{x.volatileAcidity}}</td>
+                <td>{{x.citricAcid}}</td>
+                <td>{{x.residualSugar}}</td>
+                <td>{{x.chlorides}}</td>
+                <td>{{x.freeSulfurDioxide}}</td>
+                <td>{{x.totalSulfurDioxide}}</td>
+                <td>{{x.density}}</td>
+                <td>{{x.pH}}</td>
+                <td>{{x.sulphates}}</td>
+                <td>{{x.alcohol}}</td>
+                <td>{{x.quality}}</td>
+            </tbody>
+        </table>
     </div>
 
 </div>
